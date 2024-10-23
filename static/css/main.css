@@ -1,7 +1,10 @@
 :root {
   --main-bg-color: #fff;
   --main-font-color: #313537;
-  --main-link-color: #0011ff;
+  --main-link-color: #bb0011;
+  --main-text: #fff;
+  --main-lighter: color-mix(in srgb,var(--main-link-color),#fff 15%);
+  --main-darker: color-mix(in srgb,var(--main-link-color),#000 70%);
   --header-font-color: #333333;
   --header-link-color: #666666;
   --footer-link-color: #313537;
@@ -21,7 +24,10 @@
   :root {
     --main-bg-color: #1a1a1a;
     --main-font-color: #f8f9fa;
-    --main-link-color: #ffc107;
+    --main-link-color: #DE6C09;
+    --main-text: color-mix(in srgb,var(--main-link-color),#000 80%);
+    --main-lighter: color-mix(in srgb,var(--main-link-color),#fff 20%);
+    --main-darker: color-mix(in srgb,var(--main-link-color),#000 70%);
     --header-font-color: #efefef;
     --header-link-color: #eaeaea;
     --footer-link-color: #aaa;
@@ -351,4 +357,36 @@ h6 {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.bg-main{
+  background-color: var(--main-link-color);
+}
+
+.outline-main{
+  color: var(--main-link-color);
+  box-shadow: inset 0px 0px 0px 1px var(--main-link-color)
+}
+
+.footnotes{
+  font-size: 0.75em;
+}
+
+.alert-main {
+  --bs-alert-color: var(--main-text);
+  --bs-alert-bg: var(--main-lighter);
+  --bs-alert-border-color: var(--main-link-color);
+  margin-bottom: 32px;
+}
+
+.alert-main a{
+  color: var(--main-darker);
+}
+
+.table{
+  color: var(--main-font-color);
+}
+
+.skills-badges span.badge{
+  margin-bottom: .2rem !important;
 }
